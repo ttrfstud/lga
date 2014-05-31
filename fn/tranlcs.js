@@ -15,7 +15,7 @@ function translcs(lcsres) {
     }
   }
 
-  return lcsres[mi];
+  return lcsres.subs[mi];
 }
 
 module.exports = translcs;

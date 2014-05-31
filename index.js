@@ -29,7 +29,7 @@ function lga(protein1, protein2, w) {
     lcss.push(translcs(lcs(protein1, protein2, lcscs[i])));
   }
 
-  lcsrep = dolcsrep(lcsrep);
+  lcsrep = dolcsrep(lcss);
 
   lcss = lcss.concat(threeres(protein1, protein2));
 
