@@ -1,7 +1,7 @@
 var lcs = require('longest-cont-segment');
 var gdt = require('gdt');
 
-function lga(protein1, protein2) {
+function lga(protein1, protein2, w) {
   var lcss;
   var gdts;
 
@@ -31,7 +31,7 @@ function lga(protein1, protein2) {
 
   lcsrep = dolcsrep(lcsrep);
 
-  lcss.push(threeres());
+  lcss = lcss.concat(threeres(protein1, protein2));
 
   for (i = 0; i < lcss.length; i++) {
     for (j = 0; j < gdtcs.length; j++) {
