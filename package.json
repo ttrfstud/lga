@@ -1,0 +1,10 @@
+{
+  "name": "lga",
+  "version": "0.0.0",
+  "description": "local-global alignment algorithm",
+  "main": "index.js",
+  "dependencies": {
+    "longest-cont-segment": "0.0.0",
+    "gdt": "0.0.3"
+  }
+}
