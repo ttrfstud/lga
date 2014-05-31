@@ -6,5 +6,8 @@
   "dependencies": {
     "longest-cont-segment": "0.0.0",
     "gdt": "0.0.3"
+  },
+  "devDependencies": {
+    "taptap": "0.0.3"
   }
 }

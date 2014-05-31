@@ -15,4 +15,4 @@ function sfunc(vi) {
   return x / ((1 + len) * len / 2);
 }
 
-return sfunc;
+module.exports = sfunc;
