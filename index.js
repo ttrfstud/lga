@@ -1,6 +1,12 @@
 var lcs = require('longest-cont-segment');
 var gdt = require('gdt');
 
+var translcs = require('./fn/translcs');
+var dolcsrep = require('./fn/dolcsrep');
+var threeres = require('./fn/threeres');
+var dogdtrep = require('./fn/dogdtrep');
+var dolgarep = require('./fn/dolgarep');
+
 function lga(protein1, protein2, w) {
   var lcss;
   var gdts;
@@ -14,6 +20,12 @@ function lga(protein1, protein2, w) {
 
   var i;
   var j;
+
+  var lcs;
+  var gdt;
+
+  lcs = module.exports.lcs;
+  gdt = module.exports.gdt;
 
   lcss = [];
   gdts = [];
@@ -29,19 +41,22 @@ function lga(protein1, protein2, w) {
     lcss.push(translcs(lcs(protein1, protein2, lcscs[i])));
   }
 
-  lcsrep = dolcsrep(lcss);
+  lcsrep = dolcsrep(lcss, protein1, protein2);
 
   lcss = lcss.concat(threeres(protein1, protein2));
 
   for (i = 0; i < lcss.length; i++) {
     for (j = 0; j < gdtcs.length; j++) {
-      gdts.push(gdt(protein1, protein2, lcss[i], gdtcs[j]);
+      gdts.push(gdt(protein1, protein2, lcss[i], gdtcs[j]));
     }
   }
 
   gdtrep = dogdtrep(gdts);
 
-  return dolgarep(lcsrep, gdtrep);
+  return dolgarep(lcsrep, gdtrep, w);
 }
 
 module.exports = lga;
+
+module.exports.lcs = lcs;
+module.exports.gdt = gdt;

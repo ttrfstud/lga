@@ -1,6 +1,4 @@
 function translcs(lcsres) {
-  // According to description here: https://www.npmjs.org/package/longest-cont-segment
-
   var subs;
   var len;
   var i, mi, max = -1;
@@ -9,8 +7,8 @@ function translcs(lcsres) {
   len = subs.length;
 
   for (i = 0; i < len; i++) {
-    if (subs.tgt.length > max) {
-      max = subs.tgt.length;
+    if (subs[i].tgt.length > max) {
+      max = subs[i].tgt.length;
       mi = i;
     }
   }
