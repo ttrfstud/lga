@@ -12,7 +12,7 @@ function threeres(prot1, prot2) {
   res = [];
 
   for (i = 0; i < len1; i++) {
-    for (j = 0; j < len2, j++) {
+    for (j = 0; j < len2; j++) {
       if (prot1.length > i + 2 && prot2.length > j + 2) {
         res.push({
           tgt: [i, i + 1, i + 2],
