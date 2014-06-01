@@ -1,6 +1,6 @@
 var lcs = require('longest-cont-segment');
 var gdt = require('gdt');
-
+ 
 var translcs = require('./fn/translcs');
 var dolcsrep = require('./fn/dolcsrep');
 var threeres = require('./fn/threeres');
